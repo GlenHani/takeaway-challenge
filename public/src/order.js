@@ -7,12 +7,12 @@ class Order {
       this.orderCount = {};
     }
   
-    AddToOrder(item) {
-      this.orderItems.push(item)
+    AddToOrder(food) {
+      this.orderItems.push(food)
     };
   
     TotalPrice() {
-      this.orderItems.forEach (item => this.priceTotal += item.price);
+      this.orderItems.forEach (i => this.priceTotal += i.price);
     };
   
     SubmitOrder() {

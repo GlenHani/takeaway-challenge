@@ -4,6 +4,7 @@ describe('Order', function() {
       order = new Order();      
       dish1 = new Dish("Byrek", 4.50);
       dish2 = new Dish("Pasta", 5.50);
+      dish3 = new Dish("Pasta", 5.50);
     })
  
     describe('Add To Order', function(){
@@ -35,9 +36,9 @@ describe('Order', function() {
 
         order.AddToOrder(dish1);
         order.AddToOrder(dish2);
+        order.AddToOrder(dish3);
         order.SubmitOrder();
-        console.log(order.orderCount)
-        expect(order.orderCount).toEqual({"Byrek": 1, "Pasta": 1})
+        expect(order.orderCount).toEqual({"Byrek": 1, "Pasta": 2})
       });
     });
  
